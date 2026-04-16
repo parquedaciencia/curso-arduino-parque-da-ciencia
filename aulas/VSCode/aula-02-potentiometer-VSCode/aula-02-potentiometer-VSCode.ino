@@ -2,42 +2,26 @@
  * Curso de Formação de Professores – Atividades Experimentais de Física
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
+ * Ambiente alvo: VS Code
  * Autor dos códigos originais: Aron da Rocha Battistella
  * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 10/04/2026
+ * Caminho no repositório: aulas/VSCode/aula-02-potentiometer-VSCode/aula-02-potentiometer-VSCode.ino
+ * Data da última revisão: 16/04/2026
  *
  * Descrição:
- *   /
  *   ============================================================
  *   Projeto   : Aula 02 - Potentiometer
- *   Arquivo   : aula-02-potentiometer.ino
- *   Este programa realiza a leitura de um potenciômetro conectado
- *   à entrada analógica A0 e utiliza esse valor para controlar o
- *   brilho de um LED por meio de modulação por largura de pulso
- *   (PWM) no pino digital 3.
+ *   Arquivo   : aula-02-potentiometer-VSCode.ino
+ *   Pasta     : aula-02-potentiometer-VSCode
+ *   Este sketch lê a posição de um potenciômetro conectado à entrada
+ *   analógica A0 e utiliza esse valor para controlar o brilho de um
+ *   LED por PWM.
  *
- *   Durante a execução, o Arduino:
- *   - lê continuamente a posição do potenciômetro;
- *   - converte a leitura analógica (0 a 1023) para a faixa de PWM
- *     utilizada pelo analogWrite (0 a 255);
- *   - ajusta o brilho do LED conforme a posição do potenciômetro;
- *   - envia periodicamente pela Serial os valores de leitura e o
- *     nível de brilho aplicado.
- *
- *   Componentes esperados:
- *   - 1 placa Arduino compatível;
- *   - 1 potenciômetro ligado entre 5 V, GND e cursor em A0;
- *   - 1 LED ligado ao pino 3;
- *   - 1 resistor em série com o LED para limitar a corrente.
- *
- *   Observações:
- *   - O pino 3 deve oferecer suporte a PWM.
- *   - A leitura serial é apenas de acompanhamento e não interfere
- *     diretamente no controle do brilho.
+ *   Durante a execução, os valores também podem ser enviados pela
+ *   Serial para acompanhamento didático da relação entre leitura
+ *   analógica e intensidade luminosa.
  *   ============================================================
- *   /
  */
-
 static constexpr uint8_t LED_PIN = 3;
 static constexpr uint8_t POTENTIOMETER_PIN = A0;
 static constexpr long SERIAL_BAUD_RATE = 9600L;

@@ -2,16 +2,26 @@
  * Curso de Formação de Professores – Atividades Experimentais de Física
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
+ * Ambiente alvo: VS Code
  * Autor dos códigos originais: Aron da Rocha Battistella
  * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 10/04/2026
+ * Caminho no repositório: aulas/VSCode/aula-11-gravitational_acceleration-VSCode/aula-11-gravitational_acceleration-VSCode.ino
+ * Data da última revisão: 16/04/2026
  *
  * Descrição:
- *   ─────────────────────────────────────────────────────────────────────────────
- *   1) LCD (I2C)
- *   ─────────────────────────────────────────────────────────────────────────────
+ *   ============================================================
+ *   Projeto   : Aula 11 - Gravitational Acceleration
+ *   Arquivo   : aula-11-gravitational_acceleration-VSCode.ino
+ *   Pasta     : aula-11-gravitational_acceleration-VSCode
+ *   Este sketch implementa um cronômetro experimental com display
+ *   LCD 16x2, um botão de controle e quatro sensores ao longo do
+ *   percurso de medida.
+ *
+ *   A proposta é registrar tempos de passagem em experimentos como
+ *   queda de corpos, preservando a captura de eventos rápidos e a
+ *   exibição clara dos resultados no LCD.
+ *   ============================================================
  */
-
 struct SensorEvent;
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>

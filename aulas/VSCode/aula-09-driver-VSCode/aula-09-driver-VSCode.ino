@@ -2,60 +2,26 @@
  * Curso de Formação de Professores – Atividades Experimentais de Física
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
+ * Ambiente alvo: VS Code
  * Autor dos códigos originais: Aron da Rocha Battistella
  * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 10/04/2026
+ * Caminho no repositório: aulas/VSCode/aula-09-driver-VSCode/aula-09-driver-VSCode.ino
+ * Data da última revisão: 16/04/2026
  *
  * Descrição:
- *   /
  *   ============================================================
- *   Projeto   : Aula 04 - Driver
- *   Arquivo   : aula-04-driver.ino
- *   Este programa implementa um controlador de acionamento para
- *   relé a partir do Monitor Serial do Arduino.
+ *   Projeto   : Aula 09 - Driver
+ *   Arquivo   : aula-09-driver-VSCode.ino
+ *   Pasta     : aula-09-driver-VSCode
+ *   Este sketch implementa um controlador de acionamento para relé ou
+ *   etapa de potência a partir de comandos recebidos pelo Monitor
+ *   Serial.
  *
- *   O sistema permite ligar, desligar e alternar o estado do relé
- *   manualmente, além de oferecer dois modos automáticos:
- *   - comutação periódica em intervalo configurável;
- *   - pulso único com duração configurável.
- *
- *   O código utiliza millis() em vez de delay(), o que mantém a
- *   execução responsiva e permite que novos comandos sejam lidos
- *   pela Serial enquanto o sistema continua operando.
- *
- *   Comandos aceitos no Monitor Serial:
- *   - ON
- *   - OFF
- *   - TOGGLE
- *   - STATUS
- *   - PING
- *   - HELP
- *   - AUTO ON
- *   - AUTO OFF
- *   - AUTO <ms>
- *   - INTERVAL <ms>
- *   - PULSE
- *   - PULSE <ms>
- *   - PULSECFG <ms>
- *
- *   Componentes esperados:
- *   - Placa Arduino compatível;
- *   - Módulo relé ou circuito driver para relé ligado ao pino D2;
- *   - Cabos de ligação;
- *   - Computador com acesso ao Monitor Serial da IDE do Arduino.
- *
- *   Observações importantes:
- *   - Caso seja utilizada apenas a bobina do relé, recomenda-se o
- *   uso de transistor de acionamento, diodo de roda livre e fonte
- *   adequada para proteger a placa Arduino.
- *   - Muitos módulos relé trabalham em lógica invertida (ACTIVE LOW).
- *   Se o comportamento do relé estiver invertido, ajuste os valores
- *   de kRelayActiveLevel e kRelayInactiveLevel.
- *   - O código aceita comandos com ou sem terminador de linha.
+ *   O sistema suporta comandos manuais, alternância automática por
+ *   intervalo e geração de pulso único, mantendo a execução
+ *   responsiva com base em millis().
  *   ============================================================
- *   /
  */
-
 static constexpr int kRelayPin = 2;
 static constexpr long kSerialBaudRate = 115200;
 static constexpr unsigned long kDefaultAutoIntervalMs = 2000UL;

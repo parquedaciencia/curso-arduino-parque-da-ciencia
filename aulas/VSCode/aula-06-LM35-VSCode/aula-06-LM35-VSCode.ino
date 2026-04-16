@@ -2,54 +2,26 @@
  * Curso de Formação de Professores – Atividades Experimentais de Física
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
+ * Ambiente alvo: VS Code
  * Autor dos códigos originais: Aron da Rocha Battistella
  * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 10/04/2026
+ * Caminho no repositório: aulas/VSCode/aula-06-LM35-VSCode/aula-06-LM35-VSCode.ino
+ * Data da última revisão: 16/04/2026
  *
  * Descrição:
- *   /
  *   ============================================================
  *   Projeto   : Aula 06 - LM35
- *   Arquivo   : aula-06-LM35.ino
- *   Bibliotecas: math.h
- *   Este programa implementa um sistema de monitoramento e controle
- *   térmico utilizando o sensor de temperatura LM35 conectado a uma
- *   entrada analógica do Arduino.
+ *   Arquivo   : aula-06-LM35-VSCode.ino
+ *   Pasta     : aula-06-LM35-VSCode
+ *   Este sketch implementa um sistema de monitoramento e controle
+ *   térmico com o sensor LM35 conectado à entrada analógica A0 e uma
+ *   saída digital de controle no pino D2.
  *
- *   O código realiza as seguintes etapas principais:
- *   - Faz a leitura do LM35 pela porta A0;
- *   - Utiliza a referência interna de 1,1 V do Arduino para melhorar
- *     a resolução da medida analógica;
- *   - Calcula a média de várias leituras do ADC para reduzir ruído;
- *   - Aplica filtragem exponencial para suavizar a temperatura medida;
- *   - Executa uma calibração automática da temperatura ambiente ao
- *     iniciar o sistema;
- *   - Define dois limiares com histerese em torno da temperatura
- *     ambiente calibrada, evitando acionamentos instáveis;
- *   - Aciona uma saída digital no pino D2 quando a temperatura cai
- *     abaixo do limite inferior e desliga quando a temperatura sobe
- *     acima do limite superior;
- *   - Envia informações detalhadas pela Serial, tanto em formato
- *     legível quanto em formato apropriado para plotagem.
- *
- *   Componentes esperados:
- *   - 1 Arduino compatível com analogReference(INTERNAL);
- *   - 1 sensor LM35 ligado à entrada analógica A0;
- *   - 1 carga acionada pelo pino D2, como relé, LED ou outro estágio
- *     de saída compatível;
- *   - Caso seja utilizado relé, recomenda-se diodo de flyback na bobina,
- *     como o 1N4007, para proteção contra surtos de tensão.
- *
- *   Observações:
- *   - O sinal analógico do LM35 deve ir diretamente ao A0 ou, no máximo,
- *     passar por um pequeno resistor em série;
- *   - O pino D2 é utilizado como saída digital de controle;
- *   - O programa inclui uma janela de estabilização após cada comutação,
- *     útil para ignorar interferências transitórias do circuito de carga.
+ *   O código realiza calibração automática da temperatura ambiente,
+ *   aplica filtragem, histerese e janela mínima entre comutações,
+ *   enviando dados pela Serial em formato adequado ao ambiente VS Code.
  *   ============================================================
- *   /
  */
-
 #include <math.h>
 
 /*

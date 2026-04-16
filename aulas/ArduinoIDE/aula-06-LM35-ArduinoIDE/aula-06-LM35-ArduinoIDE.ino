@@ -2,26 +2,26 @@
  * Curso de Formação de Professores – Atividades Experimentais de Física
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
+ * Ambiente alvo: Arduino IDE
  * Autor dos códigos originais: Aron da Rocha Battistella
  * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 10/04/2026
+ * Caminho no repositório: aulas/ArduinoIDE/aula-06-LM35-ArduinoIDE/aula-06-LM35-ArduinoIDE.ino
+ * Data da última revisão: 16/04/2026
  *
  * Descrição:
- *   /
- *   Stable LM35 control for Arduino IDE 2.
- *   Features:
- *   - LM35 on A0
- *   - D2 turns ON when temperature is below the ON threshold
- *   - D2 turns OFF when temperature is above the OFF threshold
- *   - Automatic ambient calibration at startup
- *   - INTERNAL 1.1 V analog reference for better resolution
- *   - Trimmed average to reject spikes
- *   - Separate control filter and display filter
- *   - Minimum dwell time to avoid fast toggling
- *   - Named output for Arduino IDE Serial Plotter
- *   /
+ *   ============================================================
+ *   Projeto   : Aula 06 - LM35
+ *   Arquivo   : aula-06-LM35-ArduinoIDE.ino
+ *   Pasta     : aula-06-LM35-ArduinoIDE
+ *   Este sketch implementa um sistema de monitoramento e controle
+ *   térmico com o sensor LM35 conectado à entrada analógica A0 e uma
+ *   saída digital de controle no pino D2.
+ *
+ *   O código realiza calibração automática da temperatura ambiente,
+ *   aplica filtragem, histerese e janela mínima entre comutações,
+ *   enviando dados pela Serial em formato adequado ao ambiente Arduino IDE.
+ *   ============================================================
  */
-
 static constexpr bool kUseSerialPlotter = true;
 
 static constexpr uint8_t kLm35Pin = A0;

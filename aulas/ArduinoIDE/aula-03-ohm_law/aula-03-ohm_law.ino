@@ -2,78 +2,26 @@
  * Curso de Formação de Professores – Atividades Experimentais de Física
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
+ * Ambiente alvo: Arduino IDE
  * Autor dos códigos originais: Aron da Rocha Battistella
  * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 10/04/2026
+ * Caminho no repositório: aulas/ArduinoIDE/aula-03-ohm_law/aula-03-ohm_law.ino
+ * Data da última revisão: 16/04/2026
  *
  * Descrição:
- *   /
  *   ============================================================
- *   Projeto   : Aula 09 - Ohm's Law
- *   Arquivo   : aula-09-ohm_law.ino
- *   Plataforma: Arduino Uno
- *   Este programa realiza a aquisição experimental de dados para o
- *   estudo da Lei de Ohm, medindo a tensão sobre um componente em teste
- *   e estimando a corrente que o atravessa a partir da tensão medida em
- *   um resistor shunt conhecido.
+ *   Projeto   : Aula 03 - Ohm's Law
+ *   Arquivo   : aula-03-ohm_law.ino
+ *   Pasta     : aula-03-ohm_law
+ *   Este sketch realiza a aquisição experimental de dados para o
+ *   estudo da Lei de Ohm.
  *
- *   O objetivo do código é detectar automaticamente apenas o intervalo
- *   útil em que o potenciômetro está sendo movimentado pelo usuário,
- *   enviando pela serial somente uma varredura coerente para posterior
- *   captura no computador por meio de um script em Python.
- *
- *   Funcionamento geral:
- *   - A tensão total do circuito é lida no pino A0.
- *   - A tensão sobre o resistor shunt é lida no pino A1.
- *   - A tensão no componente em teste é obtida por diferença.
- *   - A corrente é calculada pela relação I = V_shunt / R_shunt.
- *   - O sistema identifica quando houve movimento real do potenciômetro.
- *   - Ao detectar movimento, inicia uma varredura automática.
- *   - Enquanto houver mudança significativa, os pontos são enviados pela
- *     serial em formato estruturado.
- *   - Quando o sistema percebe que o potenciômetro parou de variar por
- *     certo tempo, a varredura é encerrada automaticamente.
- *
- *   Componentes esperados:
- *   - 1 Arduino Uno (ou compatível com ADC de 10 bits e referência de 5 V)
- *   - 1 potenciômetro para variação manual da tensão de entrada
- *   - 1 componente em teste (resistor, diodo ou outro dispositivo didático)
- *   - 1 resistor shunt de 220 ohms para inferência da corrente
- *   - Jumpers e protoboard para montagem do circuito
- *   - 1 computador para leitura da serial e salvamento dos dados
- *
- *   Montagem sugerida:
- *   - 5V do Arduino  -> terminal 1 do potenciômetro
- *   - GND do Arduino -> terminal 3 do potenciômetro
- *   - Cursor do potenciômetro -> entrada do componente em teste
- *   - Saída do componente em teste -> resistor shunt de 220 ohms
- *   - Outro terminal do shunt -> GND
- *
- *   Pontos de medição:
- *   - A0: tensão total aplicada ao circuito
- *   - A1: tensão no resistor shunt
- *
- *   Relações físicas utilizadas:
- *   - V_componente = V_total - V_shunt
- *   - I_componente = V_shunt / R_shunt
- *
- *   Protocolo serial enviado ao computador:
- *   - Linhas informativas começam com '#'
- *   - Início da varredura: START\t<timestamp_ms>\t<sweep_id>
- *   - Dados: DATA\t<timestamp_ms>\t<sweep_id>\t<V_comp_V>\t<I_comp_mA>\t<V_total_V>\t<V_shunt_V>
- *   - Fim da varredura: END\t<timestamp_ms>\t<sweep_id>\t<sample_count>
- *
- *   Observações:
- *   - O Arduino não cria diretamente um arquivo .dat no computador.
- *   - Um script hospedeiro em Python deve ler a porta serial e salvar
- *     os dados recebidos.
- *   - O código aplica média de amostras analógicas para reduzir ruído.
- *   - Pequenos valores negativos espúrios são anulados por segurança
- *     numérica, pois não são fisicamente esperados nesta montagem.
+ *   O circuito mede a tensão total aplicada, a tensão no resistor
+ *   shunt e, a partir disso, calcula a tensão no componente em teste
+ *   e a corrente correspondente, enviando as varreduras úteis pela
+ *   Serial para captura no computador.
  *   ============================================================
- *   /
  */
-
 #include <math.h>
 
 namespace {

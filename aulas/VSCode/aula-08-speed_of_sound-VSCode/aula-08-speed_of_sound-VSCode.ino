@@ -2,47 +2,26 @@
  * Curso de Formação de Professores – Atividades Experimentais de Física
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
+ * Ambiente alvo: VS Code
  * Autor dos códigos originais: Aron da Rocha Battistella
  * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 10/04/2026
+ * Caminho no repositório: aulas/VSCode/aula-08-speed_of_sound-VSCode/aula-08-speed_of_sound-VSCode.ino
+ * Data da última revisão: 16/04/2026
  *
  * Descrição:
- *   /
  *   ============================================================
  *   Projeto   : Aula 08 - Speed of Sound
- *   Arquivo   : aula-08-speed_of_sound.ino
- *   Componentes esperados:
- *   - 1 placa Arduino compatível
- *   - 1 sensor ultrassônico HC-SR04
- *   - Cabos jumper para ligação dos pinos Trig e Echo
- *   - 1 anteparo plano posicionado à frente do sensor
- *   - Computador com Monitor Serial habilitado
+ *   Arquivo   : aula-08-speed_of_sound-VSCode.ino
+ *   Pasta     : aula-08-speed_of_sound-VSCode
+ *   Este sketch utiliza um sensor ultrassônico HC-SR04 para estimar a
+ *   velocidade do som no ar a partir do tempo de voo do pulso e da
+ *   distância informada pelo usuário no Monitor Serial.
  *
- *   Este programa realiza um experimento investigativo de medição
- *   da velocidade do som no ar utilizando o sensor ultrassônico
- *   HC-SR04. O usuário escolhe, por meio do Monitor Serial, a
- *   distância em que o anteparo foi posicionado. Em seguida, o
- *   código executa várias leituras do tempo de voo do pulso
- *   ultrassônico, faz a média das leituras válidas e estima a
- *   velocidade do som a partir da relação entre distância total
- *   percorrida pelo pulso (ida e volta) e o tempo médio medido.
- *
- *   O programa também exibe mensagens de apoio no Monitor Serial,
- *   informa falhas de leitura, apresenta os valores médios obtidos
- *   e calcula um erro relativo simples tomando como referência a
- *   velocidade aproximada do som no ar a 20 °C.
- *
- *   Observações:
- *   - O sensor deve estar alinhado perpendicularmente ao anteparo.
- *   - O anteparo deve estar dentro do alcance útil do HC-SR04.
- *   - O experimento depende da distância ser previamente conhecida
- *     e corretamente selecionada pelo usuário no menu serial.
- *   - O valor calculado pode variar conforme temperatura, umidade,
- *     posicionamento do sensor e qualidade das leituras.
+ *   O programa realiza múltiplas leituras, calcula médias válidas e
+ *   apresenta um erro relativo simples em relação a um valor de
+ *   referência.
  *   ============================================================
- *   /
  */
-
 // Definição dos pinos do sensor HC-SR04.
 const int trigPin = 9;
 const int echoPin = 10;

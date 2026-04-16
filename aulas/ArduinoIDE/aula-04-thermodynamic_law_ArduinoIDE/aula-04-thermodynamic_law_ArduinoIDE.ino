@@ -1,3 +1,27 @@
+/*
+ * Curso de Formação de Professores – Atividades Experimentais de Física
+ * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
+ * Plataforma: Arduino
+ * Ambiente alvo: Arduino IDE
+ * Autor dos códigos originais: Aron da Rocha Battistella
+ * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
+ * Caminho no repositório: aulas/ArduinoIDE/aula-04-thermodynamic_law_ArduinoIDE/aula-04-thermodynamic_law_ArduinoIDE.ino
+ * Data da última revisão: 16/04/2026
+ *
+ * Descrição:
+ *   ============================================================
+ *   Projeto   : Aula 04 - Thermodynamic Law
+ *   Arquivo   : aula-04-thermodynamic_law_ArduinoIDE.ino
+ *   Pasta     : aula-04-thermodynamic_law_ArduinoIDE
+ *   Este sketch lê o sensor LM35 ligado ao pino A0, aplica média
+ *   aparada e filtro adaptativo para suavizar a leitura de
+ *   temperatura.
+ *
+ *   A saída serial foi mantida no formato adequado ao Serial Plotter
+ *   da Arduino IDE, permitindo acompanhar em tempo real os valores
+ *   bruto e filtrado do experimento.
+ *   ============================================================
+ */
 #include <math.h>
 
 constexpr uint8_t LM35_PIN = A0;

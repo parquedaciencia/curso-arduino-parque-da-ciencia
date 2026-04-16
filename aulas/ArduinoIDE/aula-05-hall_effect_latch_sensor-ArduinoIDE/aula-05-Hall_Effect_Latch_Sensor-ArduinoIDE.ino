@@ -2,54 +2,26 @@
  * Curso de Formação de Professores – Atividades Experimentais de Física
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
+ * Ambiente alvo: Arduino IDE
  * Autor dos códigos originais: Aron da Rocha Battistella
  * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 10/04/2026
+ * Caminho no repositório: aulas/ArduinoIDE/aula-05-hall_effect_latch_sensor-ArduinoIDE/aula-05-Hall_Effect_Latch_Sensor-ArduinoIDE.ino
+ * Data da última revisão: 16/04/2026
  *
  * Descrição:
- *   /
  *   ============================================================
- *   Projeto   : Aula 07 - Hall Effect Latch Sensor
- *   Arquivo   : aula-07-Hall_Effect_Latch_Sensor-ArduinoIDE.ino
- *   Este programa realiza a medição de rotação a partir de um
- *   sensor Hall do tipo latch, como o US1881/U18. O código detecta
- *   as transições do sinal digital gerado pelo sensor quando polos
- *   magnéticos passam pela sua face sensível e, com base no tempo
- *   entre essas transições, estima grandezas físicas associadas ao
- *   movimento circular.
+ *   Projeto   : Aula 05 - Hall Effect Latch Sensor
+ *   Arquivo   : aula-05-Hall_Effect_Latch_Sensor-ArduinoIDE.ino
+ *   Pasta     : aula-05-hall_effect_latch_sensor-ArduinoIDE
+ *   Este sketch mede a rotação de um sistema com auxílio de um sensor
+ *   de efeito Hall do tipo latch, como o US1881 ou equivalentes.
  *
- *   Grandezas calculadas:
- *   - Frequência de rotação em hertz (Hz)
- *   - Velocidade angular em rad/s
- *   - Aceleração centrípeta em m/s^2
- *   - Velocidade de rotação em RPM
- *
- *   Componentes esperados:
- *   - 1 Arduino compatível com interrupção externa no pino D3
- *   - 1 sensor Hall latch US1881, U18 ou equivalente
- *   - 1 ímã ou sistema girante com polos magnéticos detectáveis
- *   - Jumpers para conexão
- *   - Recomenda-se um capacitor de 100 nF entre VDD e GND,
- *     posicionado próximo ao sensor, para desacoplamento
- *
- *   Ligações esperadas:
- *   - Pino 1 do sensor (VDD)  -> 5V do Arduino
- *   - Pino 2 do sensor (GND)  -> GND do Arduino
- *   - Pino 3 do sensor (OUT)  -> pino digital D3 do Arduino
- *
- *   Observações:
- *   - O sensor possui saída do tipo open-drain, por isso o código
- *     utiliza INPUT_PULLUP para manter o nível lógico estável.
- *   - A interrupção é configurada em CHANGE para registrar as
- *     mudanças de estado do sinal do sensor.
- *   - O parâmetro kEdgesPerRevolution define quantas bordas do
- *     sinal correspondem a uma volta completa do sistema girante.
- *   - Os valores são enviados em formato compatível com o Serial
- *     Plotter da IDE do Arduino.
+ *   A partir do tempo entre pulsos válidos, o programa estima
+ *   frequência, velocidade angular, aceleração centrípeta e RPM,
+ *   enviando os resultados pela Serial em formato compatível com o
+ *   Serial Plotter do Arduino IDE.
  *   ============================================================
- *   /
  */
-
 constexpr uint8_t kHallPin = 3;
 constexpr unsigned long kBaudRate = 115200UL;
 

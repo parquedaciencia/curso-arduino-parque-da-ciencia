@@ -2,53 +2,26 @@
  * Curso de Formação de Professores – Atividades Experimentais de Física
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
+ * Ambiente alvo: VS Code
  * Autor dos códigos originais: Aron da Rocha Battistella
  * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 10/04/2026
+ * Caminho no repositório: aulas/VSCode/aula-05-hall_effect_latch_sensor-VSCode/aula-05-hall_effect_latch_sensor-VSCode.ino
+ * Data da última revisão: 16/04/2026
  *
  * Descrição:
  *   ============================================================
- *   Projeto   : Aula 07 - Sensor Hall tipo latch
- *   Arquivo   : aula-07-hall_effect_latch_sensor.ino
- *   Biblioteca: Arduino padrão
+ *   Projeto   : Aula 05 - Hall Effect Latch Sensor
+ *   Arquivo   : aula-05-hall_effect_latch_sensor-VSCode.ino
+ *   Pasta     : aula-05-hall_effect_latch_sensor-VSCode
+ *   Este sketch mede a rotação de um sistema com auxílio de um sensor
+ *   de efeito Hall do tipo latch, como o US1881 ou equivalentes.
  *
- *   Este programa realiza a medição de rotação utilizando um sensor
- *   de efeito Hall do tipo latch, como o US1881 ou modelos compatíveis.
- *   O sensor detecta a passagem do campo magnético gerado por um ímã
- *   acoplado a um eixo em rotação, permitindo estimar a frequência de
- *   giro, a velocidade angular, a aceleração centrípeta e o valor em RPM.
- *
- *   A estratégia adotada é baseada no período entre pulsos válidos,
- *   o que melhora bastante a estabilidade das medições em baixas rotações,
- *   especialmente quando comparado a métodos baseados em contagem de pulsos
- *   em janelas fixas de tempo.
- *
- *   O programa também aplica:
- *   - interrupção externa para detectar os pulsos do sensor;
- *   - filtro simples para rejeição de pulsos espúrios ou ruídos;
- *   - suavização exponencial para reduzir oscilações na leitura;
- *   - timeout para retornar a rotação a zero quando não houver novos pulsos.
- *
- *   Os dados são enviados pela Serial em formato adequado para plotagem,
- *   permitindo o acompanhamento em tempo real no Serial Plotter do VS Code
- *   ou em ferramentas equivalentes.
- *
- *   Componentes esperados:
- *   - 1 placa Arduino compatível;
- *   - 1 sensor Hall latch (ex.: US1881 / U18);
- *   - 1 ímã acoplado ao sistema rotativo;
- *   - fios de ligação;
- *   - conexão USB para alimentação e monitoramento serial.
- *
- *   Observações:
- *   - O sensor é tratado como saída do tipo open-drain, por isso o pino
- *   é configurado com INPUT_PULLUP.
- *   - O código considera, por padrão, 1 pulso válido por revolução.
- *   - Caso a montagem gere mais de um pulso por volta, o valor de
- *   kPulsesPerRevolution deve ser ajustado.
+ *   A partir do tempo entre pulsos válidos, o programa estima
+ *   frequência, velocidade angular, aceleração centrípeta e RPM,
+ *   enviando os resultados pela Serial em formato compatível com o
+ *   Serial Plotter do VS Code.
  *   ============================================================
  */
-
 #include <Arduino.h>
 
 namespace config

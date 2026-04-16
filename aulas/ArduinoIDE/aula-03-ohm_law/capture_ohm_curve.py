@@ -1,17 +1,31 @@
-"""Capture Arduino Ohm's law sweeps, export session .dat files, and generate plots.
+"""
+Curso de Formação de Professores – Atividades Experimentais de Física
+Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
+Plataforma: Python de apoio ao experimento com Arduino
+Ambiente alvo: Python 3
+Autor dos códigos originais: Aron da Rocha Battistella
+Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
+Caminho no repositório: aulas/ArduinoIDE/aula-03-ohm_law/capture_ohm_curve.py
+Data da última revisão: 16/04/2026
 
-This script listens to the serial protocol emitted by the Arduino sketch,
-keeps only useful sweeps, exports all accepted sweeps of the current session to
-a single .dat file, and updates a single scientific plot while the program is
-running.
+Descrição:
+  ============================================================
+  Projeto   : Aula 03 - Ohm's Law
+  Arquivo   : capture_ohm_curve.py
+  Pasta     : aula-03-ohm_law
+  Este script hospedeiro em Python lê o protocolo serial emitido
+  pelo Arduino na aula 03, identifica varreduras válidas, salva os
+  dados da sessão em arquivo .dat e atualiza o gráfico do
+  experimento no computador.
 
-Design choices:
-    * Sweeps in the return direction of the potentiometer are discarded.
-    * A single session-level .dat file is created per program execution.
-    * A single session-level .png plot is updated after each accepted sweep.
+  Ele serve como apoio de aquisição e visualização para a prática
+  didática da Lei de Ohm.
 
-Dependencies:
-    pip install pyserial matplotlib numpy
+  Dependências típicas:
+  - pyserial
+  - matplotlib
+  - numpy
+  ============================================================
 """
 
 from __future__ import annotations

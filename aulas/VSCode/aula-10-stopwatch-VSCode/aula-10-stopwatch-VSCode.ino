@@ -2,48 +2,25 @@
  * Curso de Formação de Professores – Atividades Experimentais de Física
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
+ * Ambiente alvo: VS Code
  * Autor dos códigos originais: Aron da Rocha Battistella
  * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 10/04/2026
+ * Caminho no repositório: aulas/VSCode/aula-10-stopwatch-VSCode/aula-10-stopwatch-VSCode.ino
+ * Data da última revisão: 16/04/2026
  *
  * Descrição:
  *   ============================================================
- *   Projeto   : Aula 05 - Stopwatch
- *   Arquivo   : aula-05-stopwatch.ino
- *   Biblioteca: New-LiquidCrystal (LiquidCrystal_I2C)
+ *   Projeto   : Aula 10 - Stopwatch
+ *   Arquivo   : aula-10-stopwatch-VSCode.ino
+ *   Pasta     : aula-10-stopwatch-VSCode
+ *   Este sketch implementa um cronômetro digital com exibição em
+ *   display LCD 16x2 via I2C e controle por dois botões físicos.
  *
- *   Este programa implementa um cronômetro digital com exibição em
- *   display LCD 16x2 com interface I2C. O sistema apresenta o título
- *   do experimento na primeira linha e mostra, na segunda linha, o
- *   tempo no formato HH:MM:SS.mmm. O cronômetro pode ser iniciado,
- *   pausado, retomado e zerado por meio de dois botões físicos.
- *
- *   O código utiliza debounce por software para reduzir leituras
- *   incorretas causadas pelo efeito de bouncing mecânico dos botões.
- *   Além disso, a atualização do LCD é otimizada para reescrever
- *   somente os campos numéricos que realmente mudaram, evitando
- *   escritas desnecessárias no display durante a execução.
- *
- *   Componentes esperados:
- *   - Arduino compatível com a IDE Arduino
- *   - Display LCD 16x2 com módulo I2C
- *   - 2 botões de pressão (Pause/Resume e Reset)
- *   - Protoboard e jumpers para a montagem
- *
- *   Ligações esperadas neste código:
- *   - Botão Pause/Resume no pino digital D2
- *   - Botão Reset no pino digital D3
- *   - Display LCD I2C no barramento padrão SDA/SCL da placa
- *   - Endereço I2C configurado para 0x27
- *
- *   Observações:
- *   - Os botões foram mantidos em modo INPUT para preservar a
- *     montagem originalmente utilizada neste experimento.
- *   - Caso o endereço I2C do display seja diferente, ele deverá ser
- *     ajustado na inicialização do objeto lcd.
+ *   O programa permite iniciar, pausar, retomar e zerar a contagem,
+ *   além de otimizar a atualização do display para evitar escritas
+ *   desnecessárias.
  *   ============================================================
  */
-
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 

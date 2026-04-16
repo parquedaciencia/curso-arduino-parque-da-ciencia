@@ -1,3 +1,27 @@
+/*
+ * Curso de Formação de Professores – Atividades Experimentais de Física
+ * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
+ * Plataforma: Arduino
+ * Ambiente alvo: Arduino IDE
+ * Autor dos códigos originais: Aron da Rocha Battistella
+ * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
+ * Caminho no repositório: aulas/ArduinoIDE/aula-04-thermodynamic_law+LCD-ArduinoIDE/aula-04-thermodynamic_law+LCD-ArduinoIDE.ino
+ * Data da última revisão: 16/04/2026
+ *
+ * Descrição:
+ *   ============================================================
+ *   Projeto   : Aula 04 - Thermodynamic Law + LCD
+ *   Arquivo   : aula-04-thermodynamic_law+LCD-ArduinoIDE.ino
+ *   Pasta     : aula-04-thermodynamic_law+LCD-ArduinoIDE
+ *   Este sketch lê o sensor LM35 ligado ao pino A0, aplica uma média
+ *   aparada para reduzir ruídos, utiliza um filtro adaptativo e
+ *   apresenta a temperatura filtrada em um display LCD 16x2 com
+ *   interface I2C.
+ *
+ *   Esta versão foi organizada para demonstração direta em bancada,
+ *   com exibição local no display.
+ *   ============================================================
+ */
 #include <Wire.h>
 #include <LCD.h>
 #include <LiquidCrystal_I2C.h>
