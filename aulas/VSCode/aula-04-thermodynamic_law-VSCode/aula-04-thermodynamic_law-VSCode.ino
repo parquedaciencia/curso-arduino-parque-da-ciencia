@@ -1,0 +1,123 @@
+#include <math.h>
+
+constexpr uint8_t LM35_PIN = A0;
+constexpr float ADC_REFERENCE_VOLTAGE = 5.0F;
+constexpr float ADC_RESOLUTION = 1023.0F;
+
+constexpr unsigned long UPDATE_INTERVAL_MS = 1500UL;
+constexpr uint8_t SAMPLE_COUNT = 150;
+constexpr uint8_t DISCARD_COUNT_PER_SIDE = 5;
+
+unsigned long last_update_ms = 0UL;
+float filtered_temperature_c = 0.0F;
+bool is_filter_initialized = false;
+
+/**
+ * Sort an array in ascending order.
+ */
+void sort_samples(uint16_t* values, const uint8_t size)
+{
+    for (uint8_t i = 0; i < size - 1; ++i) {
+        for (uint8_t j = i + 1; j < size; ++j) {
+            if (values[j] < values[i]) {
+                const uint16_t temp = values[i];
+                values[i] = values[j];
+                values[j] = temp;
+            }
+        }
+    }
+}
+
+/**
+ * Read the LM35 raw temperature in Celsius using a trimmed mean.
+ */
+float read_raw_temperature_c()
+{
+    uint16_t samples[SAMPLE_COUNT];
+
+    for (uint8_t i = 0; i < SAMPLE_COUNT; ++i) {
+        samples[i] = analogRead(LM35_PIN);
+        delay(2);
+    }
+
+    sort_samples(samples, SAMPLE_COUNT);
+
+    uint32_t sum = 0;
+    uint8_t valid_count = 0;
+
+    for (uint8_t i = DISCARD_COUNT_PER_SIDE; i < SAMPLE_COUNT - DISCARD_COUNT_PER_SIDE; ++i) {
+        sum += samples[i];
+        ++valid_count;
+    }
+
+    const float average_adc = static_cast<float>(sum) / static_cast<float>(valid_count);
+    const float voltage = average_adc * (ADC_REFERENCE_VOLTAGE / ADC_RESOLUTION);
+    const float temperature_c = voltage * 100.0F;
+
+    return temperature_c;
+}
+
+/**
+ * Apply an adaptive filter.
+ *
+ * Large jumps are followed quickly.
+ * Small oscillations are smoothed more strongly.
+ */
+float apply_adaptive_filter(const float raw_temperature_c)
+{
+    if (!is_filter_initialized) {
+        filtered_temperature_c = raw_temperature_c;
+        is_filter_initialized = true;
+        return filtered_temperature_c;
+    }
+
+    const float difference_c = fabs(raw_temperature_c - filtered_temperature_c);
+
+    if (difference_c >= 15.0F) {
+        filtered_temperature_c = raw_temperature_c;
+    } else if (difference_c >= 5.0F) {
+        filtered_temperature_c = (0.40F * raw_temperature_c) + (0.60F * filtered_temperature_c);
+    } else {
+        filtered_temperature_c = (0.15F * raw_temperature_c) + (0.85F * filtered_temperature_c);
+    }
+
+    return filtered_temperature_c;
+}
+
+/**
+ * Send data in a format compatible with the VS Code Serial Plotter extension.
+ */
+void print_plotter_line(const float raw_temperature_c, const float stable_temperature_c)
+{
+    Serial.print('>');
+    Serial.print("Raw_C:");
+    Serial.print(raw_temperature_c, 2);
+    Serial.print(',');
+    Serial.print("Filtered_C:");
+    Serial.println(stable_temperature_c, 2);
+}
+
+void setup()
+{
+    Serial.begin(9600);
+    analogReference(DEFAULT);
+
+    for (uint8_t i = 0; i < 10; ++i) {
+        analogRead(LM35_PIN);
+        delay(5);
+    }
+}
+
+void loop()
+{
+    const unsigned long current_ms = millis();
+
+    if (current_ms - last_update_ms >= UPDATE_INTERVAL_MS) {
+        last_update_ms = current_ms;
+
+        const float raw_temperature_c = read_raw_temperature_c();
+        const float stable_temperature_c = apply_adaptive_filter(raw_temperature_c);
+
+        print_plotter_line(raw_temperature_c, stable_temperature_c);
+    }
+}
