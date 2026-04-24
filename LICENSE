@@ -1,21 +1,82 @@
-MIT License
+Licenciamento do repositório / Repository Licensing
 
 Copyright (c) 2026 Aron Battistella
+Parque da Ciência Newton Freire Maia
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Português
+=========
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Este repositório utiliza uma política de licenciamento separada para código-fonte
+e materiais educacionais.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+1. Códigos-fonte, scripts e exemplos de programação
+
+Os códigos-fonte, scripts e exemplos de programação deste repositório foram
+desenvolvidos originalmente por Aron Battistella e são disponibilizados sob os
+termos da MIT License.
+
+Consulte o arquivo LICENSE-CODE para os termos completos.
+
+2. Textos, roteiros, imagens, documentação e materiais didáticos
+
+Os textos, roteiros, imagens, documentação e demais materiais educacionais deste
+repositório são disponibilizados sob a licença Creative Commons Attribution 4.0
+International — CC BY 4.0.
+
+Consulte o arquivo LICENSE-DOCS para mais informações.
+
+3. Atribuição recomendada
+
+Ao reutilizar ou adaptar este material, recomenda-se citar:
+
+Parque da Ciência Newton Freire Maia. Curso de Arduino — Formação de Professores
+em Atividades Experimentais de Física. Códigos originais por Aron Battistella.
+Repositório GitHub:
+https://github.com/Parque-da-Ciencia/curso-arduino-parque-da-ciencia
+
+4. Observação
+
+Quando houver dúvida sobre a classificação de um arquivo específico, considere:
+
+- arquivos .ino, .cpp, .h, .py, .sh, .ps1 e similares como código;
+- arquivos .md, .tex, .pdf, imagens, roteiros e materiais didáticos como
+  documentação/material educacional.
+
+English
+=======
+
+This repository uses a separate licensing policy for source code and educational
+materials.
+
+1. Source code, scripts, and programming examples
+
+The source code, scripts, and programming examples in this repository were
+originally developed by Aron Battistella and are made available under the terms
+of the MIT License.
+
+See the LICENSE-CODE file for the full terms.
+
+2. Texts, guides, images, documentation, and educational materials
+
+The texts, guides, images, documentation, and other educational materials in
+this repository are made available under the Creative Commons Attribution 4.0
+International license — CC BY 4.0.
+
+See the LICENSE-DOCS file for more information.
+
+3. Recommended attribution
+
+When reusing or adapting this material, please cite:
+
+Parque da Ciência Newton Freire Maia. Arduino Course — Teacher Training in
+Experimental Physics Activities. Original code by Aron Battistella. GitHub
+repository:
+https://github.com/Parque-da-Ciencia/curso-arduino-parque-da-ciencia
+
+4. Note
+
+When there is uncertainty about the classification of a specific file, consider:
+
+- .ino, .cpp, .h, .py, .sh, .ps1 and similar files as code;
+- .md, .tex, .pdf, images, guides, and teaching materials as documentation or
+  educational material.
