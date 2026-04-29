@@ -3,9 +3,12 @@
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
  * Ambiente alvo: Arduino IDE
- * Autor dos códigos originais: Aron da Rocha Battistella
- * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
- * Data da última revisão: 22/04/2026
+ * Autores do curso: Aron da Rocha Battistella; Marcos Rocha; Alan Henrique Abreu Dias
+ * Colaboradores do curso: Letícia Trzaskos Abbeg; Gabriel Cordeiro Chileider
+ * Autoria dos códigos: Aron da Rocha Battistella e Marcos Rocha
+ * Colaboração nos códigos: Letícia Trzaskos Abbeg, Gabriel Cordeiro Chileider e Alan Henrique Abreu Dias
+ * Repositório: https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia
+ * Data da última revisão: 29/04/2026
  *
  * Descrição:
  *   ============================================================

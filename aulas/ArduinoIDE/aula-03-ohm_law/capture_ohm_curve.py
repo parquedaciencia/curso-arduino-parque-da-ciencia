@@ -3,10 +3,13 @@ Curso de Formação de Professores – Atividades Experimentais de Física
 Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
 Plataforma: Python de apoio ao experimento com Arduino
 Ambiente alvo: Python 3
-Autor dos códigos originais: Aron da Rocha Battistella
-Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
+Autores do curso: Aron da Rocha Battistella; Marcos Rocha; Alan Henrique Abreu Dias
+Colaboradores do curso: Letícia Trzaskos Abbeg; Gabriel Cordeiro Chileider
+Autoria dos códigos: Aron da Rocha Battistella e Marcos Rocha
+Colaboração nos códigos: Letícia Trzaskos Abbeg, Gabriel Cordeiro Chileider e Alan Henrique Abreu Dias
+Repositório: https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia
 Caminho no repositório: aulas/ArduinoIDE/aula-03-ohm_law/capture_ohm_curve.py
-Data da última revisão: 16/04/2026
+Data da última revisão: 29/04/2026
 
 Descrição:
   ============================================================

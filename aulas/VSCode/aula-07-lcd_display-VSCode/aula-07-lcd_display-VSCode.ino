@@ -7,10 +7,13 @@
  * Local: Parque da Ciência Newton Freire Maia (PR, Brasil)
  * Plataforma: Arduino
  * Ambiente alvo: VS Code
- * Autor dos códigos originais: Aron da Rocha Battistella
- * Repositório: https://github.com/Dom-Aron/curso-arduino-parque-da-ciencia
+ * Autores do curso: Aron da Rocha Battistella; Marcos Rocha; Alan Henrique Abreu Dias
+ * Colaboradores do curso: Letícia Trzaskos Abbeg; Gabriel Cordeiro Chileider
+ * Autoria dos códigos: Aron da Rocha Battistella e Marcos Rocha
+ * Colaboração nos códigos: Letícia Trzaskos Abbeg, Gabriel Cordeiro Chileider e Alan Henrique Abreu Dias
+ * Repositório: https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia
  * Caminho no repositório: aulas/VSCode/aula-07-lcd_display-VSCode/aula-07-lcd_display-VSCode.ino
- * Data da última revisão: 17/04/2026
+ * Data da última revisão: 29/04/2026
  *
  * Descrição:
  *   ============================================================

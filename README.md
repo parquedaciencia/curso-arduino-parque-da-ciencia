@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Parque-da-Ciencia/curso-arduino-parque-da-ciencia">
-    <img src="https://img.shields.io/badge/GitHub-Parque--da--Ci%C3%AAncia-181717?style=for-the-badge&logo=github" alt="GitHub do Parque da Ciência">
+  <a href="https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia">
+    <img src="https://img.shields.io/badge/GitHub-parquedaciencia-181717?style=for-the-badge&logo=github" alt="GitHub do Parque da Ciência">
   </a>
   <img src="https://img.shields.io/badge/Arduino-Experimenta%C3%A7%C3%A3o-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
   <img src="https://img.shields.io/badge/F%C3%ADsica-Ensino%20Experimental-blue?style=for-the-badge" alt="Física Experimental">
@@ -100,7 +100,7 @@ A lista exata de componentes pode variar de acordo com a aula e com a adaptaçã
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/Parque-da-Ciencia/curso-arduino-parque-da-ciencia.git
+git clone https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia.git
 cd curso-arduino-parque-da-ciencia
 ```
 
@@ -186,10 +186,12 @@ Este repositório faz parte das ações de formação, experimentação e produ�
 |---|---|
 | Instituição | Parque da Ciência Newton Freire Maia |
 | Curso | Formação de Professores — Atividades Experimentais de Física com Arduino |
-| Autor dos códigos originais | Aron da Rocha Battistella |
-| GitHub do autor | [Dom-Aron](https://github.com/Dom-Aron) |
-| Organização GitHub | [Parque-da-Ciencia](https://github.com/Parque-da-Ciencia) |
-| Repositório | [curso-arduino-parque-da-ciencia](https://github.com/Parque-da-Ciencia/curso-arduino-parque-da-ciencia) |
+| Autores do curso | Aron da Rocha Battistella; Marcos Rocha; Alan Henrique Abreu Dias |
+| Colaboradores do curso | Letícia Trzaskos Abbeg; Gabriel Cordeiro Chileider |
+| Autoria dos códigos | Aron da Rocha Battistella e Marcos Rocha |
+| Colaboração nos códigos | Letícia Trzaskos Abbeg, Gabriel Cordeiro Chileider e Alan Henrique Abreu Dias |
+| Organização GitHub | [parquedaciencia](https://github.com/parquedaciencia) |
+| Repositório | [curso-arduino-parque-da-ciencia](https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia) |
 
 ---
 
@@ -217,7 +219,7 @@ Este repositório utiliza uma política de licenciamento separada para código-f
 | Códigos-fonte, scripts e exemplos de programação | MIT License |
 | Textos, roteiros, imagens, documentação e materiais didáticos | Creative Commons Attribution 4.0 International — CC BY 4.0 |
 
-Em resumo: os códigos podem ser reutilizados, modificados e distribuídos com atribuição da autoria; os materiais educacionais podem ser compartilhados e adaptados, desde que seja dado o devido crédito ao Parque da Ciência Newton Freire Maia e aos autores.
+Em resumo: os códigos podem ser reutilizados, modificados e distribuídos com atribuição da autoria; os materiais educacionais podem ser compartilhados e adaptados, desde que seja dado o devido crédito ao Parque da Ciência Newton Freire Maia, aos autores e aos colaboradores indicados nos créditos.
 
 Consulte os arquivos de licença do repositório para os termos completos:
 

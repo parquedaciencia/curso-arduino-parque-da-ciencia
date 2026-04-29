@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 Aron Battistella
+Copyright (c) 2026 Aron da Rocha Battistella and Marcos Rocha
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -26,7 +26,7 @@ Tradução informativa em português / Informative Portuguese translation
 
 Licença MIT
 
-Copyright (c) 2026 Aron Battistella
+Copyright (c) 2026 Aron da Rocha Battistella e Marcos Rocha
 
 É concedida permissão, gratuitamente, a qualquer pessoa que obtenha uma cópia
 deste software e dos arquivos de documentação associados (o "Software"), para
@@ -48,3 +48,7 @@ SOFTWARE OU O USO OU OUTRAS NEGOCIAÇÕES COM O SOFTWARE.
 
 Observação: a versão em inglês acima é o texto de referência da MIT License.
 Esta tradução é fornecida apenas para facilitar a leitura.
+
+Nota de atribuição: os códigos foram desenvolvidos por Aron da Rocha Battistella
+e Marcos Rocha, com colaboração de Letícia Trzaskos Abbeg, Gabriel Cordeiro
+Chileider e Alan Henrique Abreu Dias.

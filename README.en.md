@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Parque-da-Ciencia/curso-arduino-parque-da-ciencia">
-    <img src="https://img.shields.io/badge/GitHub-Parque--da--Ci%C3%AAncia-181717?style=for-the-badge&logo=github" alt="Parque da Ciência GitHub">
+  <a href="https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia">
+    <img src="https://img.shields.io/badge/GitHub-parquedaciencia-181717?style=for-the-badge&logo=github" alt="Parque da Ciência GitHub">
   </a>
   <img src="https://img.shields.io/badge/Arduino-Experimentation-00979D?style=for-the-badge&logo=arduino&logoColor=white" alt="Arduino">
   <img src="https://img.shields.io/badge/Physics-Experimental%20Teaching-blue?style=for-the-badge" alt="Experimental Physics">
@@ -100,7 +100,7 @@ The exact list of components may vary depending on the lesson and on adaptations
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/Parque-da-Ciencia/curso-arduino-parque-da-ciencia.git
+git clone https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia.git
 cd curso-arduino-parque-da-ciencia
 ```
 
@@ -186,10 +186,12 @@ This repository is part of its actions related to teacher training, experimentat
 |---|---|
 | Institution | Parque da Ciência Newton Freire Maia |
 | Course | Teacher Training — Experimental Physics Activities with Arduino |
-| Original code author | Aron da Rocha Battistella |
-| Author GitHub | [Dom-Aron](https://github.com/Dom-Aron) |
-| GitHub organization | [Parque-da-Ciencia](https://github.com/Parque-da-Ciencia) |
-| Repository | [curso-arduino-parque-da-ciencia](https://github.com/Parque-da-Ciencia/curso-arduino-parque-da-ciencia) |
+| Course authors | Aron da Rocha Battistella; Marcos Rocha; Alan Henrique Abreu Dias |
+| Course contributors | Letícia Trzaskos Abbeg; Gabriel Cordeiro Chileider |
+| Code authorship | Aron da Rocha Battistella and Marcos Rocha |
+| Code contributions | Letícia Trzaskos Abbeg, Gabriel Cordeiro Chileider, and Alan Henrique Abreu Dias |
+| GitHub organization | [parquedaciencia](https://github.com/parquedaciencia) |
+| Repository | [curso-arduino-parque-da-ciencia](https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia) |
 
 ---
 
@@ -217,7 +219,7 @@ This repository uses a separate licensing policy for source code and educational
 | Source code, scripts, and programming examples | MIT License |
 | Texts, guides, images, documentation, and educational materials | Creative Commons Attribution 4.0 International — CC BY 4.0 |
 
-In summary: the code may be reused, modified, and distributed with attribution; the educational materials may be shared and adapted, provided that proper credit is given to Parque da Ciência Newton Freire Maia and the authors.
+In summary: the code may be reused, modified, and distributed with attribution; the educational materials may be shared and adapted, provided that proper credit is given to Parque da Ciência Newton Freire Maia, the authors, and the contributors listed in the credits.
 
 See the repository license files for the complete terms:
 

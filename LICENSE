@@ -1,7 +1,6 @@
 Licenciamento do repositório / Repository Licensing
 
-Copyright (c) 2026 Aron Battistella
-Parque da Ciência Newton Freire Maia
+Copyright (c) 2026 Parque da Ciência Newton Freire Maia
 
 Português
 =========
@@ -12,8 +11,9 @@ e materiais educacionais.
 1. Códigos-fonte, scripts e exemplos de programação
 
 Os códigos-fonte, scripts e exemplos de programação deste repositório foram
-desenvolvidos originalmente por Aron Battistella e são disponibilizados sob os
-termos da MIT License.
+desenvolvidos originalmente por Aron da Rocha Battistella e Marcos Rocha, com
+colaboração de Letícia Trzaskos Abbeg, Gabriel Cordeiro Chileider e Alan Henrique
+Abreu Dias, e são disponibilizados sob os termos da MIT License.
 
 Consulte o arquivo LICENSE-CODE para os termos completos.
 
@@ -25,16 +25,31 @@ International — CC BY 4.0.
 
 Consulte o arquivo LICENSE-DOCS para mais informações.
 
-3. Atribuição recomendada
+3. Créditos do curso
+
+Autores do curso de Arduino:
+
+- Aron da Rocha Battistella;
+- Marcos Rocha;
+- Alan Henrique Abreu Dias.
+
+Colaboradores do curso de Arduino:
+
+- Letícia Trzaskos Abbeg;
+- Gabriel Cordeiro Chileider.
+
+4. Atribuição recomendada
 
 Ao reutilizar ou adaptar este material, recomenda-se citar:
 
 Parque da Ciência Newton Freire Maia. Curso de Arduino — Formação de Professores
-em Atividades Experimentais de Física. Códigos originais por Aron Battistella.
-Repositório GitHub:
-https://github.com/Parque-da-Ciencia/curso-arduino-parque-da-ciencia
+em Atividades Experimentais de Física. Curso por Aron da Rocha Battistella,
+Marcos Rocha e Alan Henrique Abreu Dias, com colaboração de Letícia Trzaskos
+Abbeg e Gabriel Cordeiro Chileider. Códigos por Aron da Rocha Battistella e
+Marcos Rocha. Repositório GitHub:
+https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia
 
-4. Observação
+5. Observação
 
 Quando houver dúvida sobre a classificação de um arquivo específico, considere:
 
@@ -51,8 +66,9 @@ materials.
 1. Source code, scripts, and programming examples
 
 The source code, scripts, and programming examples in this repository were
-originally developed by Aron Battistella and are made available under the terms
-of the MIT License.
+originally developed by Aron da Rocha Battistella and Marcos Rocha, with
+contributions from Letícia Trzaskos Abbeg, Gabriel Cordeiro Chileider, and Alan
+Henrique Abreu Dias, and are made available under the terms of the MIT License.
 
 See the LICENSE-CODE file for the full terms.
 
@@ -64,16 +80,31 @@ International license — CC BY 4.0.
 
 See the LICENSE-DOCS file for more information.
 
-3. Recommended attribution
+3. Course credits
+
+Arduino course authors:
+
+- Aron da Rocha Battistella;
+- Marcos Rocha;
+- Alan Henrique Abreu Dias.
+
+Arduino course contributors:
+
+- Letícia Trzaskos Abbeg;
+- Gabriel Cordeiro Chileider.
+
+4. Recommended attribution
 
 When reusing or adapting this material, please cite:
 
 Parque da Ciência Newton Freire Maia. Arduino Course — Teacher Training in
-Experimental Physics Activities. Original code by Aron Battistella. GitHub
-repository:
-https://github.com/Parque-da-Ciencia/curso-arduino-parque-da-ciencia
+Experimental Physics Activities. Course by Aron da Rocha Battistella, Marcos
+Rocha, and Alan Henrique Abreu Dias, with contributions from Letícia Trzaskos
+Abbeg and Gabriel Cordeiro Chileider. Code by Aron da Rocha Battistella and
+Marcos Rocha. GitHub repository:
+https://github.com/parquedaciencia/curso-arduino-parque-da-ciencia
 
-4. Note
+5. Note
 
 When there is uncertainty about the classification of a specific file, consider:
 
